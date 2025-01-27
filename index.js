@@ -19,10 +19,7 @@ const PORT = process.env.PORT
 
     // allow cors. the options allow cookies from/to all origins
     app.use(cors({
-        origin: (origin, callback) => {
-            // Allow all origins (dynamically set the origin)
-            callback(null, origin || "*");
-          },
+        origin: "*",
         credentials: true
     }))
     
