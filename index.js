@@ -18,10 +18,7 @@ const PORT = process.env.PORT
     app.use(cookieParser())
 
     // allow cors. the options allow cookies from/to all origins
-    app.use(cors({
-        origin: "*",
-        credentials: true
-    }))
+    app.use(cors())
 
     app.use((req, res, next) => {
         res.setHeader("Access-Control-Allow-Origin", "*");
