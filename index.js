@@ -24,7 +24,7 @@ const PORT = process.env.PORT
     }))
 
     app.use((req, res, next) => {
-        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Origin", "https://workout-central-client.vercel.app");
         res.setHeader("Access-Control-Allow-Methods", "POST, GET, PATCH, HEAD, DELETE");
         res.setHeader("Access-Control-Allow-Headers", "Content-Type");
         next();
