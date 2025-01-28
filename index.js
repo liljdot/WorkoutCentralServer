@@ -25,7 +25,7 @@ const PORT = process.env.PORT
 
     app.use((req, res, next) => {
         res.setHeader("Access-Control-Allow-Origin", "*");
-        res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+        res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE");
         res.setHeader("Access-Control-Allow-Headers", "Content-Type");
         next();
       })
@@ -35,7 +35,7 @@ const PORT = process.env.PORT
         next()
     })
 
-    app.get("/", (req, res) => res.send("hello"))
+    app.get("/", (req, res) => res.send("tEST"))
 
     //routes
     app.use('/api/user', userRoutes)
