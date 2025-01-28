@@ -19,7 +19,7 @@ const PORT = process.env.PORT
 
     // allow cors. the options allow cookies from/to all origins
     app.use(cors({
-        origin: "*",
+        origin: "https://workout-central-client.vercel.app",
         credentials: true
     }))
 
