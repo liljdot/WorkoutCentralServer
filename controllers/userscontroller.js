@@ -71,7 +71,7 @@ module.exports.login = (req, res) => {
             res.cookie('workout_central_user_token', token, {
                 maxAge: 86400000,
                 httpOnly: true,
-                sameSite: "lax",
+                sameSite: false,
                 secure: true,
                 signed: true
             })
@@ -85,7 +85,7 @@ module.exports.logout = (req, res) => {
     res.cookie("workout_central_user_token", "", {
         maxAge: 1,
         httpOnly: true,
-        sameSite: "lax",
+        sameSite: false,
         secure: true,
         signed: true
     })
@@ -133,7 +133,7 @@ module.exports.signup = (req, res) => {
             res.cookie('workout_central_user_token', token, {
                 maxAge: 86400000,
                 httpOnly: true,
-                sameSite: "lax",
+                sameSite: false,
                 secure: true,
                 signed: true
             })
