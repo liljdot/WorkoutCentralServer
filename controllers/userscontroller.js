@@ -72,7 +72,8 @@ module.exports.login = (req, res) => {
                 maxAge: 86400000,
                 httpOnly: true,
                 sameSite: "none",
-                secure: true
+                secure: true,
+                signed: true
             })
             res.status(200).json({ status: 200, message: "login was successful", data: { token, user: { email: userObj.email, id: userObj.id } } })
         })
@@ -85,7 +86,8 @@ module.exports.logout = (req, res) => {
         maxAge: 1,
         httpOnly: true,
         sameSite: "none",
-        secure: true
+        secure: true,
+        signed: true
     })
 
     res.status(200).json({ status: 200, message: "logged out successfully" })
@@ -132,7 +134,8 @@ module.exports.signup = (req, res) => {
                 maxAge: 86400000,
                 httpOnly: true,
                 sameSite: "none",
-                secure: true
+                secure: true,
+                signed: true
             })
             res.status(200).json({ status: 200, message: "User created successfully", data: { token } })
         })())
